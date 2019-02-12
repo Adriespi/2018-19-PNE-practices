@@ -31,5 +31,14 @@ each line appearing in the terminal is a message showing, for example, the time 
 64 bytes from 212.128.253.113: icmp_seq=3 ttl=64 time=0.063 ms
 
 
+The ping you make to your own computer is always going to be smaller
 
+URL----> universal resource locator-----> it's for identifying a computer interface adapted for humans. Each url has an ip address.
+The first thing a browser does is getting the ip adress corresponding to the url you just typed
+google's ip ----> 216.58.214.164
+
+To connect to a server connected anywhere in the internet we need the ip address.
+
+The port is a number that identifies any of the available applications in a computer. So if we want to connect to a server we need to specify the ip adress of the machine and the
+port you wish to use
 
