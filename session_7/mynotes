@@ -8,5 +8,28 @@ have to run the server and check if everything's ok.
 This programs all run inside computers (general term: phones, tablets and many other devices). To test the client-server communication, it's possible to have 1 computer running
 the client and the server in the same computer.
 
-Client and server are connected by the internet
+Client and server are connected through the internet. In the internet there are isolated computers connected with each other and divided in groups or 'networks'. If we want to send
+a message from the client(in one computer) to the server (in another computer) we need to identify it first. This is called the IP ADRESS. This refers to the interface, which means
+that one computer can have multiple ip address (the server) and the client only has one. This ip can change depending on the computer you are connected to.
+
+F.E: my ip address when connected to wireless urjc: 10.0.48.141
+     the computer in the lab's ip address is 212.128.253.113
+     The teacher's computer's ip address is 212.128.253.64
+
+The command 'ping' is just for sending a message to the computer to check if the computer is 'alive' in the internet
+To execute it just type 'ping' following the ip address you want to check in the terminal
+each line appearing in the terminal is a message showing, for example, the time it took the command to be received and return.
+
+***Example of ping times for 8.8.8.8***
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=121 time=9.03 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=121 time=3.27 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=121 time=3.45 ms
+
+***Example of ping times for 212.128.253.113 (computer lab)***
+64 bytes from 212.128.253.113: icmp_seq=1 ttl=64 time=0.061 ms
+64 bytes from 212.128.253.113: icmp_seq=2 ttl=64 time=0.056 ms
+64 bytes from 212.128.253.113: icmp_seq=3 ttl=64 time=0.063 ms
+
+
+
 
