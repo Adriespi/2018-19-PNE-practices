@@ -1,0 +1,12 @@
+#Here's were I'll take my notes for the 7th session#
+
+Client-server model:
+The client starts the communication (request). The server generates a message with the response . There can be multiple clients following the same scheme.
+When there's no client, nothing happens, the server is constantly running and 'listening' to requests. However, when there's no server, nothing can work. We first
+have to run the server and check if everything's ok.
+
+This programs all run inside computers (general term: phones, tablets and many other devices). To test the client-server communication, it's possible to have 1 computer running
+the client and the server in the same computer.
+
+Client and server are connected by the internet
+
