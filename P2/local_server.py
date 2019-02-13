@@ -32,7 +32,7 @@ try:
         print("Message from client: {}".format(msg))
 
         # Send the messag
-        message = "HELLOOOOOO"
+        message = "Welcome to Adri's server"
         send_bytes = str.encode(message)
         # We must write bytes, not a string
         clientsocket.send(send_bytes)
