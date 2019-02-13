@@ -24,23 +24,28 @@ try:
         # Another connection!e
         number_con += 1
 
-        # Print the conection number
-        print("CONNECTION: {}. From the IP: {}".format(number_con, address))
+        condition = True
+        while condition:
+            # Print the conection number
+            print("CONNECTION: {}. From the IP: {}".format(number_con, address))
 
-        # Read the message from the client, if any
-        msg = clientsocket.recv(2048).decode("utf-8")
-        print("Message from client: {}".format(msg))
+            # Read the message from the client, if any
+            msg = clientsocket.recv(2048).decode("utf-8")
+            print("Message from client: {}".format(msg))
 
-        # Send the messag
-        message = "Welcome to Adri's server"
-        send_bytes = str.encode(message)
-        # We must write bytes, not a string
-        clientsocket.send(send_bytes)
-        clientsocket.close()
-
+            msg = msg.upper()
+            if msg == 'EXIT':
+                condition = False
+                clientsocket.close()
+            else:
+                # Send the message
+                message = input('TYPE: ')
+                send_bytes = str.encode(message)
+                # We must write bytes, not a string
+                clientsocket.send(send_bytes)
 except socket.error:
     print("Problems using port {}. Do you have permission?".format(PORT))
 
 except KeyboardInterrupt:
     print("Server stopped by the user")
-    serversocket.close()
+serversocket.close()
