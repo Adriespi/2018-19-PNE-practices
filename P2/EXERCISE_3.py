@@ -6,18 +6,27 @@ print('Socket created')
 #same behaviour as a file
 PORT = 8086
 IP = '212.128.253.88'
-while True:
-#connect to the server
-    s.connect((IP,PORT))
 
+#connect to the server
+s.connect((IP,PORT))
+
+condition = True
+
+while condition:
 #send a message to the server
     msg2 = input('Message: ')
-    s.send(str.encode(msg2)) #encode is to translate the string into bytes
+    msg2.lower()
+    s.send(str.encode(msg2))  # encode is to translate the string into bytes
+    if msg2 == 'exit':
+        condition = False
+        s.close()
+    else:  # receive a message from the server
+        msg = s.recv(2048).decode('utf-8')
+        print('Message from the server: ')
+        print(msg)
 
-#receive a message from the server
-msg = s.recv(2048).decode('utf-8')
-print('Message from the server: ')
-print(msg)
-s.close()
+
+
+
 
 print('The end')
