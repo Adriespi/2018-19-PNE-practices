@@ -6,11 +6,9 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 PORT = 8080
 IP = '212.128.253.64'
 
-#connect to the server
-s.connect((IP,PORT))
-
 #send a message to the server
 while True:
+    s.connect((IP, PORT))
     msg = input('Enter: ')
     s.send(str.encode(msg))
 
