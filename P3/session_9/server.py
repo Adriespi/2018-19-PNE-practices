@@ -1,4 +1,4 @@
-import socket
+import socket, termcolor
 
 PORT = 8080
 IP = "212.128.253.113"
@@ -8,7 +8,7 @@ def process_client(cs):#specialized at attending info from the client, reading a
     #reading the message from the client
     msg = cs.recv(2048).decode('utf-8')
     #printing the message
-    print('Message from the client: {}'.format(msg))
+    termcolor.cprint('Message from the client: {}'.format(msg),'green')
     #now we send back the message to the client using the sent method. ECHO-SERVER
     cs.send(str.encode(msg))
     cs.close()

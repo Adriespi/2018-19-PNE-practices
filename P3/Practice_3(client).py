@@ -2,11 +2,11 @@ import socket
 
 # SERVER IP, PORT
 IP = "212.128.253.113"
-PORT = 8080
+PORT = 8085
 
 while True:
     # The client is blocking the server....  NOT A GOOD DESIGN!!!
-    msg = input("> ") #we only connect to the server when you have data to send to the server, if not, it will block the server
+    msg = str('') #we only connect to the server when you have data to send to the server, if not, it will block the server
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
