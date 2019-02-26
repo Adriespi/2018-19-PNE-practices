@@ -3,7 +3,7 @@ import termcolor
 
 # Change this IP to yours!!!!!
 IP = "212.128.253.113"
-PORT = 8086
+PORT = 8085
 MAX_OPEN_REQUESTS = 5
 
 
@@ -19,19 +19,10 @@ def process_client(cs):
     print("Request message: ")
     termcolor.cprint(msg, 'green')
 
-    content = """
-    <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-      <head>
-        <meta charset="utf-8">
-        <title>Green server</title>
-      </head>
-      <body style="background-color: lightred;">
-        <h1>YOU'RE IN MY SERVER NOW</h1>
-        <p>I am the Green Server! :-)</p>
-      </body>
-    </html>
-    """
+    with open('index.html','r') as f:
+        content = ''
+        for row in f:
+            content += row
 
     status_line = "HTTP/1.1 200 OK\r\n"
 
