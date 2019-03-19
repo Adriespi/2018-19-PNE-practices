@@ -10,4 +10,5 @@ print(person['age'])
 
 for num in enumerate(person['Phonenumber']):
     termcolor.cprint("Phone:",'blue',end='')
+    termcolor.cprint("Phone{}:".format(i),'blue',end='')
     print(num)
