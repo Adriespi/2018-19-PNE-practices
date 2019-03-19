@@ -2,7 +2,6 @@
   "Firstname": 'Troll',
   "Lastname": 'Face',
   "Age": 20,
-  "Phonenumber":{
-{}
-  }
+  "Phonenumber":['1111-1111',"2222-2222"]
+
 }
