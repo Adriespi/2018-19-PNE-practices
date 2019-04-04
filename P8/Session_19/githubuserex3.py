@@ -25,10 +25,11 @@ def endpoint(enpt):
 
 
 HOSTNAME = "api.github.com"
-ENDPOINT = "/users/"
-GITHUB_ID = "Adriespi"
+ENDPOINT = "/users"
+GITHUB_ID = "/Adriespi"
 METHOD = "GET"
 REPOS = "/repos"
+
 
 enpt = ENDPOINT + GITHUB_ID
 enpt1 = ENDPOINT + GITHUB_ID + REPOS
@@ -65,3 +66,7 @@ num = int(nrepos)
 print("List of repositories: \n")
 for i in range(num):
     print('--->',repossearch(i))
+
+enpt2 = REPOS + GITHUB_ID + '/2018-19-PNE-practices' + '/commits'
+print(enpt2)
+print(endpoint(enpt2)[0])
